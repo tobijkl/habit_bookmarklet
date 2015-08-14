@@ -11,7 +11,7 @@ xhr.setRequestHeader("x-api-key", api_key);
 xhr.setRequestHeader("x-api-user", api_user);
 var data = '{"text":"'+q+'","type":"todo","value":"0"}';
 xhr.onreadystatechange = function() {
-    if(this.readyState == 4) {
+    if(this.readyState == 4 && this.status == 200) {
         window.alert("Task created.");
     }
 };
